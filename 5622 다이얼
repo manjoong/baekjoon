@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<string.h>
+int main(void)
+{
+	char num[8][5]={"ABC","DEF","GHI","JKL","MNO","PQRS","TUV","WXYZ"};
+	int i,j,k,length;
+	k=0;
+	int count = 0;
+	char str[16]=" ";
+	gets(str);
+	length=strlen(str);
+	
+	for(k=0;k<length;k++){
+	for(i=0;i<8;i++){
+	for(j=0;j<5;j++){
+	if(str[k]==num[i][j]){
+	count+=i+3;
+}
+}
+	}
+
+}
+
+printf("%d",count);
+}
