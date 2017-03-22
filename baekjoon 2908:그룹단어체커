@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<string.h>
+int main(void)
+{int n,i,j,k,length;
+int count = 0;
+scanf("%d", &n); //입력받음 
+char str[101]=" "; //문자배열 초기화 
+
+for(i=0;i<n;i++){ //n번 입력받음 
+scanf("%s",str); 
+length=strlen(str); //문자열의 길이 
+for(j=0;j<length;j++){  //문자열 하나하나 탐색 
+	for(k=0;k<length;k++){  //문자열 하나당 같은문자열있나 탐색 
+	if(str[j]==str[k]&&j!=k&&str[j+1]!=str[k]&&k>j){
+/*조건=>같은문자가 나올때, 단 위치는 다를때, 단 연속으로 나올때를 제외, 
+단 탐색할때 앞의 남은 문자만 탐색 */ 
+	count++;//모든 조건이 만족되면 그룹단어가 아니라고 간주 count+1 
+	goto A; //조건이 만족되면 더이상 탐색할 필요가 없으니 초기 for문으로 돌아감 
+}
+
+}
+
+}
+A:;	
+}
+printf("%d",n-count); //전체- 그룹x  
+	
+}
