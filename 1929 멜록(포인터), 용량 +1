@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main (void){
+	int i,j,k,m,n,l;
+	int *str;
+	scanf("%d %d",&m, &n);
+	str=(int*)malloc(sizeof(int)*n+1);
+    for(l=2;l<n;l++)
+    str[l]=0;
+    str[1]=1;
+    
+	for(i=2;i<n;i++){
+		for(j=2;j*i<=n;j++)
+	   str[i*j]=1;
+}
+for(k=m;k<=n;k++){
+if(str[k]==0)
+printf("%d\n", k);
+}
+}
