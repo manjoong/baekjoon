@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main(void){
+	int i,n,max,min,temp;
+	min = 1000000;
+	max = -1000000;
+	scanf("%d",&n);
+	for(i=0;i<n;i++){
+		scanf("%d", &temp);
+		if(temp>=max)
+		max=temp;
+		if(temp<=min)
+		min=temp;
+	}
+	printf("%d %d",min,max);
+
+}
